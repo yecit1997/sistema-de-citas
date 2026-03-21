@@ -34,13 +34,14 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
-    
+    'apps.users',
 ]
 
 PARTHIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + PARTHIRD_PARTY_APPS
@@ -182,3 +183,6 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+
+# Modelo para auutenticacion
+AUTH_USER_MODEL = 'users.Users'
